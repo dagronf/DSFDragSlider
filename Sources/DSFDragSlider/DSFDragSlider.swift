@@ -458,15 +458,24 @@ public class DSFDragSlider: NSView, NSGestureRecognizerDelegate {
 			rectanglePath.stroke()
 		}
 
+		// Arrow Badge
+
 		if self.isEnabled, !self.isPanning {
 			NSGraphicsContext.enterState {
 				let b = self.badge.copy() as! NSBezierPath
-				b.transform(using: AffineTransform(translationByX: self.bounds.width - 15, byY: 3))
+				b.transform(using: AffineTransform(translationByX: self.bounds.width - 15.5, byY: 3.5))
 
-				NSColor.disabledControlTextColor.setStroke()
+				if self.isDarkMode() {
+					NSColor(calibratedWhite: 0.4, alpha: 1.0).setStroke()
+				}
+				else {
+					NSColor(calibratedWhite: 0.7, alpha: 1.0).setStroke()
+				}
 				b.stroke()
 			}
 		}
+
+		// Crosshair and button
 
 		NSGraphicsContext.enterState {
 
@@ -519,23 +528,23 @@ public class DSFDragSlider: NSView, NSGestureRecognizerDelegate {
 
 		//// Bezier Drawing
 		let bezierPath = NSBezierPath()
-		bezierPath.move(to: NSPoint(x: 3.94, y: 3))
-		bezierPath.line(to: NSPoint(x: 6.07, y: 1))
-		bezierPath.line(to: NSPoint(x: 8.21, y: 3))
+		bezierPath.move(to: NSPoint(x: 4, y: 3))
+		bezierPath.line(to: NSPoint(x: 6, y: 1))
+		bezierPath.line(to: NSPoint(x: 8, y: 3))
 		bezierPath.lineWidth = 1
 		result.append(bezierPath)
 
 		//// Bezier 5 Drawing
 		let bezier5Path = NSBezierPath()
-		bezier5Path.move(to: NSPoint(x: 6.07, y: 10.8))
-		bezier5Path.line(to: NSPoint(x: 6.07, y: 1.2))
+		bezier5Path.move(to: NSPoint(x: 6, y: 10))
+		bezier5Path.line(to: NSPoint(x: 6, y: 1))
 		bezier5Path.lineWidth = 1
 		result.append(bezier5Path)
 
 		//// Bezier 6 Drawing
 		let bezier6Path = NSBezierPath()
-		bezier6Path.move(to: NSPoint(x: 1.1, y: 6))
-		bezier6Path.line(to: NSPoint(x: 11.25, y: 6))
+		bezier6Path.move(to: NSPoint(x: 1, y: 6))
+		bezier6Path.line(to: NSPoint(x: 11, y: 6))
 		bezier6Path.lineWidth = 1
 		result.append(bezier6Path)
 
@@ -551,9 +560,9 @@ public class DSFDragSlider: NSView, NSGestureRecognizerDelegate {
 
 		//// Bezier 4 Drawing
 		let bezier4Path = NSBezierPath()
-		bezier4Path.move(to: NSPoint(x: 4.07, y: 9))
-		bezier4Path.line(to: NSPoint(x: 6.07, y: 11))
-		bezier4Path.line(to: NSPoint(x: 8.07, y: 9))
+		bezier4Path.move(to: NSPoint(x: 4, y: 9))
+		bezier4Path.line(to: NSPoint(x: 6, y: 11))
+		bezier4Path.line(to: NSPoint(x: 8, y: 9))
 		bezier4Path.lineWidth = 1
 		result.append(bezier4Path)
 

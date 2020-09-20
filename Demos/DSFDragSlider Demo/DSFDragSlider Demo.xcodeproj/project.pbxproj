@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2310303B2517486C005EF645 /* DSFLabelledTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 2310303A2517486C005EF645 /* DSFLabelledTextField */; };
 		2383E1DF251713200006803E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2383E1DE251713200006803E /* AppDelegate.swift */; };
 		2383E1E1251713210006803E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2383E1E0251713210006803E /* Assets.xcassets */; };
 		2383E1E4251713210006803E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2383E1E2251713210006803E /* MainMenu.xib */; };
@@ -28,6 +29,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2310303B2517486C005EF645 /* DSFLabelledTextField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +89,9 @@
 			dependencies = (
 			);
 			name = "DSFDragSlider Demo";
+			packageProductDependencies = (
+				2310303A2517486C005EF645 /* DSFLabelledTextField */,
+			);
 			productName = "DSFDragSlider Demo";
 			productReference = 2383E1DB251713200006803E /* DSFDragSlider Demo.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 2383E1D2251713200006803E;
+			packageReferences = (
+				231030392517486C005EF645 /* XCRemoteSwiftPackageReference "DSFLabelledTextField" */,
+			);
 			productRefGroup = 2383E1DC251713200006803E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,7 +218,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -265,7 +273,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -289,7 +297,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.darrenford.DSFDragSlider-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -311,7 +319,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.darrenford.DSFDragSlider-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -340,6 +348,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		231030392517486C005EF645 /* XCRemoteSwiftPackageReference "DSFLabelledTextField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dagronf/DSFLabelledTextField.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2310303A2517486C005EF645 /* DSFLabelledTextField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 231030392517486C005EF645 /* XCRemoteSwiftPackageReference "DSFLabelledTextField" */;
+			productName = DSFLabelledTextField;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2383E1D3251713200006803E /* Project object */;
 }
