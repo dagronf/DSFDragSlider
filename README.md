@@ -55,6 +55,11 @@ The control can report updates via a supplied delegate (DSFDragSliderProtocol)
 /// The user cancelled an active drag (using the ESC key)
 @objc func dragSlider(_ dragSlide: DSFDragSlider, didCancelDragAtPoint: CGPoint)
 ```
+
+## Screenshots
+
+<img src="https://github.com/dagronf/dagronf.github.io/raw/master/art/projects/DSFDragSlider/s1.png" alt="drawing" style="width:321px;"/>
+
 ## License
 
 ```
