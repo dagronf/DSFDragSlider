@@ -1,9 +1,28 @@
 //
 //  DSFDragSlider.swift
-//  DraggyChanger
 //
 //  Created by Darren Ford on 26/7/20.
+//  Copyright © 2020 Darren Ford. All rights reserved.
 //
+//	MIT License
+//
+//	Permission is hereby granted, free of charge, to any person obtaining a copy
+//	of this software and associated documentation files (the "Software"), to deal
+//	in the Software without restriction, including without limitation the rights
+//	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//	copies of the Software, and to permit persons to whom the Software is
+//	furnished to do so, subject to the following conditions:
+//
+//	The above copyright notice and this permission notice shall be included in all
+//	copies or substantial portions of the Software.
+//
+//	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//	SOFTWARE.
 
 #if os(macOS)
 
@@ -57,13 +76,16 @@ private extension NSView {
 @objc public protocol DSFDragSliderProtocol: class {
 
 	/// A drag was started at a particular point
-	@objc func dragSlider(_ dragSlide: DSFDragSlider, didStartDragAtPoint: CGPoint)
+	@objc func dragSlider(_ dragSlide: DSFDragSlider, didStartDragAtPoint point: CGPoint)
 
 	/// The position changed for the specified drag slider
-	@objc func dragSlider(_ dragSlide: DSFDragSlider, didChangePosition: CGPoint)
+	@objc func dragSlider(_ dragSlide: DSFDragSlider, didChangePosition point: CGPoint)
 
 	/// The user cancelled an active drag (using the ESC key)
-	@objc func dragSlider(_ dragSlide: DSFDragSlider, didCancelDragAtPoint: CGPoint)
+	@objc func dragSlider(_ dragSlide: DSFDragSlider, didCancelDragAtPoint point: CGPoint)
+
+	/// A drag was completed
+	@objc func dragSlider(_ dragSlide: DSFDragSlider, didEndDragAtPoint point: CGPoint)
 }
 
 @IBDesignable
@@ -142,7 +164,6 @@ public class DSFDragSlider: NSView, NSGestureRecognizerDelegate {
 			let nv = min(max(minY, newValue), maxY)
 			self.position.y = nv
 			self.didChangeValue(for: \.position)
-			self.needsDisplay = true
 		}
 	}
 
@@ -235,6 +256,10 @@ public class DSFDragSlider: NSView, NSGestureRecognizerDelegate {
 		var scaleX: CGFloat = self.deltaX
 		var scaleY: CGFloat = self.deltaY
 
+		if !self.isPanning {
+			return
+		}
+
 		if let event = NSApp.currentEvent {
 			if event.modifierFlags.contains(.shift) { scaleX *= 10; scaleY *= 10 }
 			else if event.modifierFlags.contains(.option) { scaleX /= 10; scaleY /= 10 }
@@ -297,9 +322,16 @@ public class DSFDragSlider: NSView, NSGestureRecognizerDelegate {
 		//}
 
 		NSCursor.pop()
+
+		if !self.isPanning {
+			return
+		}
+
 		self.isPanning = false
 
 		self.needsDisplay = true
+
+		self.delegate?.dragSlider(self, didEndDragAtPoint: self.position)
 	}
 
 	public override func keyDown(with event: NSEvent) {
@@ -311,6 +343,7 @@ public class DSFDragSlider: NSView, NSGestureRecognizerDelegate {
 			if canChangeX {
 				let nx = min(max(self.minX, self.position.x - incr), self.maxX)
 				self.position.x = nx
+				self.delegate?.dragSlider(self, didChangePosition: self.position)
 			}
 			else {
 				NSSound.beep()
@@ -320,6 +353,7 @@ public class DSFDragSlider: NSView, NSGestureRecognizerDelegate {
 			if canChangeX {
 				let nx = min(max(self.minX, self.position.x + incr), self.maxX)
 				self.position.x = nx
+				self.delegate?.dragSlider(self, didChangePosition: self.position)
 			}
 			else {
 				NSSound.beep()
@@ -329,6 +363,7 @@ public class DSFDragSlider: NSView, NSGestureRecognizerDelegate {
 			if canChangeY {
 				let ny = min(max(self.minY, self.position.y + incr), self.maxY)
 				self.position.y = ny
+				self.delegate?.dragSlider(self, didChangePosition: self.position)
 			}
 			else {
 				NSSound.beep()
@@ -338,6 +373,7 @@ public class DSFDragSlider: NSView, NSGestureRecognizerDelegate {
 			if canChangeY {
 				let ny = min(max(self.minY, self.position.y - incr), self.maxY)
 				self.position.y = ny
+				self.delegate?.dragSlider(self, didChangePosition: self.position)
 			}
 			else {
 				NSSound.beep()
