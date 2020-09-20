@@ -112,6 +112,7 @@ public class DSFDragSlider: NSView, NSGestureRecognizerDelegate {
 		didSet {
 			self.didChangeValue(for: \.x)
 			self.didChangeValue(for: \.y)
+			self.needsDisplay = true
 		}
 	}
 
@@ -126,6 +127,7 @@ public class DSFDragSlider: NSView, NSGestureRecognizerDelegate {
 			let nv = min(max(minX, newValue), maxX)
 			self.position.x = nv
 			self.didChangeValue(for: \.position)
+			self.needsDisplay = true
 		}
 	}
 
@@ -140,6 +142,7 @@ public class DSFDragSlider: NSView, NSGestureRecognizerDelegate {
 			let nv = min(max(minY, newValue), maxY)
 			self.position.y = nv
 			self.didChangeValue(for: \.position)
+			self.needsDisplay = true
 		}
 	}
 
