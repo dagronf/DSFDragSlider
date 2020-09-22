@@ -9,7 +9,7 @@ A virtual trackpad macOS control.
 
 ## Why
 
-I have a project that needs the ability to change 2-dimension values (x:y or width:height for example).  The project has limited UI space so I wanted a control that acted like a trackpad for controlling 
+I have a project that needs the ability to change 2-dimension values (x:y or width:height for example).  The project has limited UI space so I wanted a control that acted like a trackpad for tweaking a positional value.
 
 ## Features
 
@@ -56,9 +56,39 @@ The control can report updates via a supplied delegate (DSFDragSliderProtocol)
 @objc func dragSlider(_ dragSlide: DSFDragSlider, didCancelDragAtPoint: CGPoint)
 ```
 
+## SwiftUI
+
+There is also a preliminary SwiftUI wrapper for DSFDragSlider, called `DSFDragSliderUI`
+
+```swift
+
+struct ContentView: View {
+   // The configuration for the drag slider
+   var configuration = DragSlider.Configuration(
+      rect: CGRect(x: -100, y: -100, width: 200, height: 200),
+      deltaX: 1,
+      deltaY: 1
+   )
+   
+   // A dynamically updated position as the user drags the control
+   @State private var currentPosition = CGPoint(x: 50, y: 50)
+
+   var body: some View {
+      DSFDragSliderUI(
+         configuration: .constant(configuration),
+         currentPosition: $position
+      )
+   }
+}
+```
+
+
 ## Screenshots
 
 <img src="https://github.com/dagronf/dagronf.github.io/raw/master/art/projects/DSFDragSlider/s1.png" alt="drawing" style="width:321px;"/>
+
+![](https://github.com/dagronf/dagronf.github.io/raw/master/art/projects/DSFDragSlider/dsfdragslider_demo.gif)
+
 
 ## License
 

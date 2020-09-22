@@ -13,8 +13,14 @@
 		2331A79025184CCC0053FBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2331A78F25184CCC0053FBF0 /* Assets.xcassets */; };
 		2331A79325184CCC0053FBF0 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2331A79125184CCC0053FBF0 /* MainMenu.xib */; };
 		2331A79625184CCC0053FBF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2331A79525184CCC0053FBF0 /* main.m */; };
-		2331A7A525184E010053FBF0 /* DSFDragSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2383E1EE251713450006803E /* DSFDragSlider.swift */; };
 		2331A7AC25184F5A0053FBF0 /* DSFLabelledTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 2331A7AB25184F5A0053FBF0 /* DSFLabelledTextField */; };
+		2331A7B625185AD00053FBF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2331A7B525185AD00053FBF0 /* AppDelegate.swift */; };
+		2331A7B825185AD00053FBF0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2331A7B725185AD00053FBF0 /* ContentView.swift */; };
+		2331A7BA25185AD10053FBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2331A7B925185AD10053FBF0 /* Assets.xcassets */; };
+		2331A7BD25185AD10053FBF0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2331A7BC25185AD10053FBF0 /* Preview Assets.xcassets */; };
+		2331A7C025185AD10053FBF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2331A7BE25185AD10053FBF0 /* Main.storyboard */; };
+		2331A7CA25185AF40053FBF0 /* DSFDragSlider_SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2331A7C925185AF40053FBF0 /* DSFDragSlider_SwiftUI.swift */; };
+		2331A7CE25185AFB0053FBF0 /* DSFDragSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2383E1EE251713450006803E /* DSFDragSlider.swift */; };
 		2383E1DF251713200006803E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2383E1DE251713200006803E /* AppDelegate.swift */; };
 		2383E1E1251713210006803E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2383E1E0251713210006803E /* Assets.xcassets */; };
 		2383E1E4251713210006803E /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2383E1E2251713210006803E /* MainMenu.xib */; };
@@ -30,6 +36,15 @@
 		2331A79425184CCC0053FBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2331A79525184CCC0053FBF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2331A79725184CCC0053FBF0 /* DSFDragSlider_Objc_Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DSFDragSlider_Objc_Demo.entitlements; sourceTree = "<group>"; };
+		2331A7B325185AD00053FBF0 /* DSFDragSlider SwiftUI Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DSFDragSlider SwiftUI Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2331A7B525185AD00053FBF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2331A7B725185AD00053FBF0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2331A7B925185AD10053FBF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2331A7BC25185AD10053FBF0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2331A7BF25185AD10053FBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2331A7C125185AD10053FBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2331A7C225185AD10053FBF0 /* DSFDragSlider_SwiftUI_Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DSFDragSlider_SwiftUI_Demo.entitlements; sourceTree = "<group>"; };
+		2331A7C925185AF40053FBF0 /* DSFDragSlider_SwiftUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DSFDragSlider_SwiftUI.swift; path = ../../../Sources/DSFDragSlider/DSFDragSlider_SwiftUI.swift; sourceTree = "<group>"; };
 		2383E1DB251713200006803E /* DSFDragSlider Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DSFDragSlider Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2383E1DE251713200006803E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2383E1E0251713210006803E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,6 +61,13 @@
 			files = (
 				231519B525184E8400D40833 /* DSFDragSlider in Frameworks */,
 				2331A7AC25184F5A0053FBF0 /* DSFLabelledTextField in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2331A7B025185AD00053FBF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,11 +103,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		2331A7B425185AD00053FBF0 /* DSFDragSlider SwiftUI Demo */ = {
+			isa = PBXGroup;
+			children = (
+				2331A7C925185AF40053FBF0 /* DSFDragSlider_SwiftUI.swift */,
+				2331A7B525185AD00053FBF0 /* AppDelegate.swift */,
+				2331A7B725185AD00053FBF0 /* ContentView.swift */,
+				2331A7B925185AD10053FBF0 /* Assets.xcassets */,
+				2331A7BE25185AD10053FBF0 /* Main.storyboard */,
+				2331A7C125185AD10053FBF0 /* Info.plist */,
+				2331A7C225185AD10053FBF0 /* DSFDragSlider_SwiftUI_Demo.entitlements */,
+				2331A7BB25185AD10053FBF0 /* Preview Content */,
+			);
+			path = "DSFDragSlider SwiftUI Demo";
+			sourceTree = "<group>";
+		};
+		2331A7BB25185AD10053FBF0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2331A7BC25185AD10053FBF0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		2383E1D2251713200006803E = {
 			isa = PBXGroup;
 			children = (
 				2383E1DD251713200006803E /* DSFDragSlider Demo */,
 				2331A78B25184CCB0053FBF0 /* DSFDragSlider Objc Demo */,
+				2331A7B425185AD00053FBF0 /* DSFDragSlider SwiftUI Demo */,
 				2383E1DC251713200006803E /* Products */,
 				2331A7AA25184F5A0053FBF0 /* Frameworks */,
 			);
@@ -96,6 +142,7 @@
 			children = (
 				2383E1DB251713200006803E /* DSFDragSlider Demo.app */,
 				2331A78A25184CCB0053FBF0 /* DSFDragSlider Objc Demo.app */,
+				2331A7B325185AD00053FBF0 /* DSFDragSlider SwiftUI Demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,6 +192,23 @@
 			productReference = 2331A78A25184CCB0053FBF0 /* DSFDragSlider Objc Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		2331A7B225185AD00053FBF0 /* DSFDragSlider SwiftUI Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2331A7C525185AD10053FBF0 /* Build configuration list for PBXNativeTarget "DSFDragSlider SwiftUI Demo" */;
+			buildPhases = (
+				2331A7AF25185AD00053FBF0 /* Sources */,
+				2331A7B025185AD00053FBF0 /* Frameworks */,
+				2331A7B125185AD00053FBF0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DSFDragSlider SwiftUI Demo";
+			productName = "DSFDragSlider SwiftUI Demo";
+			productReference = 2331A7B325185AD00053FBF0 /* DSFDragSlider SwiftUI Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		2383E1DA251713200006803E /* DSFDragSlider Demo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2383E1E9251713210006803E /* Build configuration list for PBXNativeTarget "DSFDragSlider Demo" */;
@@ -177,6 +241,9 @@
 					2331A78925184CCB0053FBF0 = {
 						CreatedOnToolsVersion = 12.2;
 					};
+					2331A7B225185AD00053FBF0 = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					2383E1DA251713200006803E = {
 						CreatedOnToolsVersion = 12.2;
 					};
@@ -201,6 +268,7 @@
 			targets = (
 				2383E1DA251713200006803E /* DSFDragSlider Demo */,
 				2331A78925184CCB0053FBF0 /* DSFDragSlider Objc Demo */,
+				2331A7B225185AD00053FBF0 /* DSFDragSlider SwiftUI Demo */,
 			);
 		};
 /* End PBXProject section */
@@ -212,6 +280,16 @@
 			files = (
 				2331A79025184CCC0053FBF0 /* Assets.xcassets in Resources */,
 				2331A79325184CCC0053FBF0 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2331A7B125185AD00053FBF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2331A7C025185AD10053FBF0 /* Main.storyboard in Resources */,
+				2331A7BD25185AD10053FBF0 /* Preview Assets.xcassets in Resources */,
+				2331A7BA25185AD10053FBF0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,7 +311,17 @@
 			files = (
 				2331A79625184CCC0053FBF0 /* main.m in Sources */,
 				2331A78E25184CCB0053FBF0 /* AppDelegate.m in Sources */,
-				2331A7A525184E010053FBF0 /* DSFDragSlider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2331A7AF25185AD00053FBF0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2331A7CE25185AFB0053FBF0 /* DSFDragSlider.swift in Sources */,
+				2331A7CA25185AF40053FBF0 /* DSFDragSlider_SwiftUI.swift in Sources */,
+				2331A7B825185AD00053FBF0 /* ContentView.swift in Sources */,
+				2331A7B625185AD00053FBF0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +343,14 @@
 				2331A79225184CCC0053FBF0 /* Base */,
 			);
 			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		2331A7BE25185AD10053FBF0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2331A7BF25185AD10053FBF0 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		2383E1E2251713210006803E /* MainMenu.xib */ = {
@@ -307,6 +403,54 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.darrenford.DSFDragSlider-Objc-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		2331A7C325185AD10053FBF0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "DSFDragSlider SwiftUI Demo/DSFDragSlider_SwiftUI_Demo.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"DSFDragSlider SwiftUI Demo/Preview Content\"";
+				DEVELOPMENT_TEAM = 3L6RK3LGGW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "DSFDragSlider SwiftUI Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.darrenford.DSFDragSlider-SwiftUI-Demo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		2331A7C425185AD10053FBF0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "DSFDragSlider SwiftUI Demo/DSFDragSlider_SwiftUI_Demo.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"DSFDragSlider SwiftUI Demo/Preview Content\"";
+				DEVELOPMENT_TEAM = 3L6RK3LGGW;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "DSFDragSlider SwiftUI Demo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.darrenford.DSFDragSlider-SwiftUI-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -479,6 +623,15 @@
 			buildConfigurations = (
 				2331A79825184CCC0053FBF0 /* Debug */,
 				2331A79925184CCC0053FBF0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2331A7C525185AD10053FBF0 /* Build configuration list for PBXNativeTarget "DSFDragSlider SwiftUI Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2331A7C325185AD10053FBF0 /* Debug */,
+				2331A7C425185AD10053FBF0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

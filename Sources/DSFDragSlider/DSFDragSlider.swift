@@ -75,9 +75,6 @@ private extension NSView {
 
 @objc public protocol DSFDragSliderProtocol: class {
 
-	/// A drag was started at a particular point
-	@objc func dragSlider(_ dragSlide: DSFDragSlider, didStartDragAtPoint point: CGPoint)
-
 	/// The position changed for the specified drag slider
 	@objc func dragSlider(_ dragSlide: DSFDragSlider, didChangePosition point: CGPoint)
 
@@ -111,6 +108,21 @@ public class DSFDragSlider: NSView, NSGestureRecognizerDelegate {
 	@IBInspectable var maxY: CGFloat = 1000
 	public var canChangeY: Bool {
 		return (maxY - minY) > 0.0
+	}
+
+	/// Convenience for setting extents via a rect
+	public var rect: CGRect {
+		get {
+			return CGRect(x: minX, y: minY, width: maxX - minX, height: maxY - minY)
+		}
+		set {
+			self.minX = newValue.minX
+			self.maxX = newValue.maxX
+			self.minY = newValue.minY
+			self.maxY = newValue.maxY
+			
+			self.needsDisplay = true
+		}
 	}
 
 	/// The delta recorded per pixel move
@@ -275,9 +287,6 @@ public class DSFDragSlider: NSView, NSGestureRecognizerDelegate {
 			self.position = CGPoint(x: nx, y: ny)
 
 			self.delegate?.dragSlider(self, didChangePosition: self.position)
-		}
-		else {
-			self.delegate?.dragSlider(self, didStartDragAtPoint: translation)
 		}
 
 		lastPosition = translation
