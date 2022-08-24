@@ -35,6 +35,8 @@ All properties support Cocoa Bindings.
 * `deltaX` : The dragging x scale factor (CGFloat). The higher the value, the faster the tracking.
 * `deltaY` : The dragging y scale factor (CGFloat). The higher the value, the faster the tracking.
 
+* `range` : The rectangle representing the draggable range.
+
 #### Positions
 
 * `position` : The current position (CGPoint)
@@ -58,26 +60,28 @@ The control can report updates via a supplied delegate (DSFDragSliderProtocol)
 
 ## SwiftUI
 
-There is also a preliminary SwiftUI wrapper for DSFDragSlider, called `DSFDragSliderUI`
+There is also a SwiftUI wrapper for DSFDragSlider, called `DSFDragSliderUI`
 
 ```swift
-
 struct ContentView: View {
    // The configuration for the drag slider
    var configuration = DragSlider.Configuration(
-      rect: CGRect(x: -100, y: -100, width: 200, height: 200),
+      range: CGRect(x: -100, y: -100, width: 200, height: 200),
       deltaX: 1,
       deltaY: 1
    )
    
    // A dynamically updated position as the user drags the control
    @State private var currentPosition = CGPoint(x: 50, y: 50)
+   
+   @State private var isDisabled = false
 
    var body: some View {
       DSFDragSliderUI(
          configuration: .constant(configuration),
          currentPosition: $position
       )
+      .disabled(self.isDisabled)
    }
 }
 ```

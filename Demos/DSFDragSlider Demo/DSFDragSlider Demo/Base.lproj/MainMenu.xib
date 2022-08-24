@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17503.1" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17503.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -683,18 +683,18 @@
                     </menu>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="98" y="154"/>
+            <point key="canvasLocation" x="136" y="354"/>
         </menu>
         <window title="DSFDragSlider Demo" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" id="QvC-M9-y7g">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="335" y="390" width="299" height="182"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1415"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="299" height="182"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMr-ne-B4b" customClass="DSFDragSlider" customModule="DSFDragSlider_Demo" customModuleProvider="target">
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DMr-ne-B4b" customClass="DSFDragSlider" customModule="DSFDragSlider">
                         <rect key="frame" x="20" y="87" width="51" height="51"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <userDefinedRuntimeAttributes>
@@ -727,7 +727,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </customView>
-                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DCL-Tu-A9c" customClass="DSFDragSlider" customModule="DSFDragSlider_Demo" customModuleProvider="target">
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DCL-Tu-A9c" customClass="DSFDragSlider" customModule="DSFDragSlider">
                         <rect key="frame" x="20" y="20" width="51" height="27"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <userDefinedRuntimeAttributes>
@@ -776,7 +776,7 @@
                             <userDefinedRuntimeAttribute type="string" keyPath="label" value="x"/>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <binding destination="Voe-Tx-rLC" name="value" keyPath="self.dragSlider.x" id="Fn7-fn-tVV"/>
+                            <binding destination="Voe-Tx-rLC" name="value" keyPath="self.dragSlider.x" id="O6N-eF-lci"/>
                         </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQm-PH-FbI" customClass="DSFLabelledTextField" customModule="DSFLabelledTextField">
@@ -795,7 +795,7 @@
                             <userDefinedRuntimeAttribute type="string" keyPath="label" value="y"/>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <binding destination="Voe-Tx-rLC" name="value" keyPath="self.dragSlider.y" id="gtv-6b-52B"/>
+                            <binding destination="Voe-Tx-rLC" name="value" keyPath="self.dragSlider.y" id="6g0-Bt-gHH"/>
                         </connections>
                     </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kyS-MA-8vg" customClass="DSFLabelledTextField" customModule="DSFLabelledTextField">
@@ -847,6 +847,49 @@
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="string" keyPath="label" value="y"/>
                         </userDefinedRuntimeAttributes>
+                    </textField>
+                    <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vEH-PM-CJd" customClass="DSFDragSlider" customModule="DSFDragSlider">
+                        <rect key="frame" x="191" y="87" width="88" height="51"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="minX">
+                                <real key="value" value="-120"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="maxX">
+                                <real key="value" value="120"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="minY">
+                                <real key="value" value="-80"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="maxY">
+                                <real key="value" value="80"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="delta">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="x">
+                                <real key="value" value="30"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="y">
+                                <real key="value" value="30"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="deltaX">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="deltaY">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isEnabled" value="NO"/>
+                        </userDefinedRuntimeAttributes>
+                    </customView>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lbk-tx-mv3">
+                        <rect key="frame" x="189" y="146" width="60" height="16"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" lineBreakMode="clipping" title="Disabled" id="yBI-3y-NYC">
+                            <font key="font" metaFont="systemSemibold" size="13"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
                     </textField>
                 </subviews>
             </view>

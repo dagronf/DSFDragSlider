@@ -7,6 +7,8 @@
 
 import Cocoa
 
+import DSFDragSlider
+
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 

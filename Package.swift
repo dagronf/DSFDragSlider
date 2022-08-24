@@ -4,28 +4,32 @@
 import PackageDescription
 
 let package = Package(
-    name: "DSFDragSlider",
+	name: "DSFDragSlider",
 	platforms: [
-	   .macOS(.v10_11)
+		.macOS(.v10_11)
 	],
-    products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
-        .library(
-            name: "DSFDragSlider",
-            targets: ["DSFDragSlider"]),
-    ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
-    ],
-    targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .target(
-            name: "DSFDragSlider",
-            dependencies: []),
-        .testTarget(
-            name: "DSFDragSliderTests",
-            dependencies: ["DSFDragSlider"]),
-    ]
+	products: [
+		.library(
+			name: "DSFDragSlider",
+			type: .static,
+			targets: ["DSFDragSlider"]
+		),
+		.library(
+			name: "DSFDragSlider-Dynamic",
+			type: .dynamic,
+			targets: ["DSFDragSlider"]
+		),
+	],
+	dependencies: [
+		// Dependencies declare other packages that this package depends on.
+		.package(url: "https://github.com/dagronf/DSFAppearanceManager", from: "3.0.0")
+	],
+	targets: [
+		.target(
+			name: "DSFDragSlider",
+			dependencies: ["DSFAppearanceManager"]),
+		.testTarget(
+			name: "DSFDragSliderTests",
+			dependencies: ["DSFDragSlider"]),
+	]
 )
